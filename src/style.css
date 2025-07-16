@@ -1,0 +1,8 @@
+.head{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #fff1e6, #e6ffe6, #f3e6ff, #fce0e0);
+}
