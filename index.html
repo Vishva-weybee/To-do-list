@@ -5,16 +5,42 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <div class="head">
+    <header class="head">
       <img src="images/check-square.png" alt="" class="logo">
       <h1 class="heading">Busy day</h1>
-    </div>
+    </header>
 
+    <main>
+      <div class="heading-2">
+        <h2>Hello, Emily!</h2>
+      <div class="date-temp">
+        <div class="date" id="current-date">Tue, 27 Feb</div>
+        <div class="temp" id="current-temp">67</div>
+      </div>
+      </div>
 
+      <div class="add-new-list-btn">
+        <button class="add-btn">+ Add new List</button>
+      </div>
+      
+      <div id="list-container" class="list-grid">
 
+      </div>
+
+    </main>
+
+    <footer>
+      <p class="footer-line">© 2024 Busy Day by ScriptedSprouts </p>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
