@@ -1,85 +1,111 @@
-*{
-  margin : 0;
+/* Reset & Base */
+* {
+  margin: 0;
   padding: 0;
- 
 }
+
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
 }
 
-.head{
+.head {
   width: 100%;
   height: clamp(4rem, 10vh, 5rem);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to right, #fff1e6, #e6ffe6, #f3e6ff, #fce0e0);
+  padding: 1rem;
 }
 
-.logo{
-  height: 30px;
-  width: 30px;
+.logo {
+  height: 1.875rem;
+  width: 1.875rem;
 }
-.heading{
+
+.heading {
   font-family: 'Figtree', sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  height: 29px;
+  font-size: 1.5rem;
+  height: 1.8125rem;
 }
-
 
 main {
   flex: 1;
-  padding-left: 296px; 
-  padding-right: 300px;
-  padding-top: 50px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-top: 3.125rem;
 }
 
-.heading-2{
+.heading-2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.heading-2 h2{
+/* @media screen and (max-width: 750px) and (max-height: 900px) {
+  .heading-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+} */
+
+.heading-2 h2 {
   font-family: 'Figtree', sans-serif;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 100%;
 }
-.date-temp{
+
+@media screen and (max-width: 750px)  {
+  .heading-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* optional spacing between h2 and date-temp */
+  }
+
+  .date-temp {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+.date-temp {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 3.125rem;
 }
 
-.date, .temp{
+.date, .temp {
   font-family: 'Figtree', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   display: flex;
 }
 
-.add-new-list-btn{
-  padding-top: 30px;
+.add-new-list-btn {
+  padding-top: 1.875rem;
 }
 
-.add-btn{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 250px;
-  background: rgba(0, 0, 0, 1); 
+.add-btn {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  width: 15.625rem;
+  background: rgba(0, 0, 0, 1);
   color: white;
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  border-radius: 8px;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
 }
 
-.add-btn:hover{
+.add-btn:hover {
   background: #333;
   cursor: pointer;
 }
@@ -87,66 +113,67 @@ main {
 .list-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-#list-container{
-  padding-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
 }
 
-.task-card{
+#list-container {
+  padding-top: 1.875rem;
+}
+
+.task-card {
   background-color: rgba(255, 246, 231, 1);
-  width: 250px;
+  width: 15.625rem;
   border: 1px solid black;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
 }
 
-.task-card-header{
+.task-card-header {
   display: flex;
   justify-content: space-between;
 }
 
-.task-card-header:hover{
+.task-card-header:hover {
   background-color: #FFFFFF;
 }
 
-.task-card-header h2{
+.task-card-header h2 {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-.delete-list-btn{
+.delete-list-btn {
   background: none;
   border: none;
 }
 
-.task-list{
-  padding: 5px;
+.task-list {
+  padding: 0.3125rem;
   list-style: none;
 }
 
-.task-list .task-input-container{
-  padding:5px
+.task-list .task-input-container {
+  padding: 0.3125rem;
 }
 
-.task-item{
+.task-item {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px;
+  gap: 0.3125rem;
+  padding: 0.3125rem;
 }
 
 .task-text {
   flex-grow: 1;
   word-break: break-word;
-  padding-left: 5px;
+  padding-left: 0.3125rem;
   font-family: 'Figtree', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-.task-item > .delete-task-btn{
+.task-item > .delete-task-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -156,25 +183,23 @@ main {
   transition: opacity 0.3s ease;
 }
 
-/* Show delete button only when hovering over the task */
 .task-item:hover .delete-task-btn {
   opacity: 1;
   pointer-events: auto;
 }
 
-.task-input-container input{
+.task-input-container input {
   border: 1px solid white;
   border-radius: 1px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: 'Figtree', sans-serif;
   font-weight: 400;
-  padding: 5px ;
-  width: calc(100% - 30px); /* Adjust width to account for button */
-
+  padding: 0.3125rem;
+  width: calc(100% - 1.875rem);
 }
 
 .task-checkbox:checked {
-  accent-color: black; /* Black checkbox tick */
+  accent-color: black;
 }
 
 .task-text.completed {
@@ -182,37 +207,31 @@ main {
   opacity: 0.6;
 }
 
-
-
-/*Footer*/
-footer{
+footer {
   background-color: rgba(236, 236, 236, 1);
-  height: 100px;
   height: clamp(6rem, 12.5vh , 6.5rem);
   width: 100%;
   margin-top: 2rem;
   text-align: center;
-  
   display: flex;
-  align-items: center;  
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0;
+  padding: 1rem;
 }
 
-.footer-line{
+.footer-line {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
-
 
 .top-controls-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 0;
-  /* padding: 0 10px; */
+  margin: 1.25rem 0;
 }
 
 .left-controls {
@@ -222,55 +241,51 @@ footer{
 .right-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: center;
   justify-content: flex-end;
 }
 
-/* Style shared across all buttons & selects */
 .btn {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   background-color: black;
   color: white;
   font-family: 'Figtree', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22white%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-  min-width: 120px;
+  background-position: right 0.625rem center;
+  background-size: 0.75rem;
+  min-width: 7.5rem;
   text-align: left;
 }
 
-/* Hover effect */
 .btn:hover {
   background-color: #333;
 }
 
-/* Input styling */
 #global-search {
   background-color: white;
   color: black;
   border: 1px solid #ccc;
-  padding: 8px 12px;
-  min-width: 160px;
+  padding: 0.5rem 0.75rem;
+  min-width: 10rem;
   font-family: 'Figtree', sans-serif;
-  font-size: 14px;
-  border-radius: 6px;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
   background-image: none;
 }
 
-/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .top-controls-container {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   .right-controls {
@@ -287,33 +302,32 @@ footer{
   align-items: center;
   font-size: 0.85rem;
   color: #666;
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 .day img {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.375rem;
 }
-
 
 .day-with-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
-  gap: 40px;
+  margin-top: 0.25rem;
+  gap: 2.5rem;
 }
 
 .task-actions {
   display: flex;
-  gap: 8px;
-  padding-left: 30px;
+  gap: 0.5rem;
+  padding-left: 1.875rem;
 }
 
 .action-icon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s;
@@ -322,4 +336,3 @@ footer{
 .action-icon:hover {
   opacity: 1;
 }
-
