@@ -136,7 +136,7 @@ const dateSection = document.createElement('div');
 dateSection.className = 'day';
 
 const calendar = document.createElement('img');
-calendar.src = 'public/images/calendar.png';
+calendar.src = '/public/images/calendar.png';
 calendar.alt = 'Calendar icon';
 dateSection.appendChild(calendar);
 
@@ -150,7 +150,7 @@ actions.className = 'task-actions';
 
 // Delete Selected
 const deleteSelected = document.createElement('img');
-deleteSelected.src = 'public/images/delete-selected.png';
+deleteSelected.src = '/public/images/delete-selected.png';
 deleteSelected.alt = 'Delete selected';
 deleteSelected.title = 'Delete selected tasks';
 deleteSelected.className = 'action-icon';
@@ -166,7 +166,7 @@ deleteSelected.onclick = () => {
 
 // Select All
 const selectAll = document.createElement('img');
-selectAll.src = 'public/images/select-all.jpg';
+selectAll.src = '/public/images/select-all.jpg';
 selectAll.alt = 'Select all';
 selectAll.title = 'Select all tasks';
 selectAll.className = 'action-icon';
@@ -177,7 +177,7 @@ selectAll.onclick = () => {
 
 // Unselect All
 const unselectAll = document.createElement('img');
-unselectAll.src = 'public/images/unselect.png';
+unselectAll.src = '/public/images/unselect.png';
 unselectAll.alt = 'Unselect all';
 unselectAll.title = 'Unselect all tasks';
 unselectAll.className = 'action-icon';
@@ -200,7 +200,7 @@ day.appendChild(actions);
   const deleteListBtn = document.createElement('button');
   deleteListBtn.className = 'delete-list-btn';
   const deleteBtn = document.createElement("img");
-  deleteBtn.src = "public/images/trash-2.png";
+  deleteBtn.src = "/public/images/trash-2.png";
   deleteListBtn.appendChild(deleteBtn);
   deleteListBtn.title = 'Delete list';
 
@@ -327,7 +327,7 @@ function createTaskItem(task, list) {
   const deleteBtn = document.createElement('button');
   deleteBtn.className = 'delete-task-btn';
   const deleteIcon = document.createElement("img");
-  deleteIcon.src = "public/images/Delete.png";
+  deleteIcon.src = "/public/images/Delete.png";
   deleteBtn.appendChild(deleteIcon);
   deleteBtn.title = 'Delete task';
 
