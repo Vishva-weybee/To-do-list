@@ -21,16 +21,50 @@
 
     <main>
       <div class="heading-2">
-        <h2>Hello, Emily!</h2>
+        <h2>Hello, Vishva!</h2>
       <div class="date-temp">
         <div class="date" id="current-date">Tue, 27 Feb</div>
         <div class="temp" id="current-temp">67</div>
       </div>
       </div>
 
-      <div class="add-new-list-btn">
-        <button class="add-btn">+ Add new List</button>
+
+      <div class="top-controls-container">
+      <div class="left-controls">
+        <button class="add-btn">+ Add New List</button>
       </div>
+
+      <div class="right-controls">
+
+        <input type="text" id="global-search" placeholder="Search tasks..." class="btn" />
+      
+        <select id="global-filter" class="btn">
+          <option selected disabled>Filter</option>
+          <optgroup label="Filter Options">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+          </optgroup>
+        </select>
+      
+        <select id="global-sort" class="btn">
+          <option selected disabled>Sort</option>
+          <optgroup label="Sort By">
+            <option value="az">A to Z</option>
+            <option value="za">Z to A</option>
+            <option value="oldest">Oldest</option>
+            <option value="newest">Newest</option>
+          </optgroup>
+        </select>
+      
+      
+      </div>
+</div>
+
+
+
+      
+
       
       <div id="list-container" class="list-grid">
 

@@ -173,6 +173,16 @@ main {
 
 }
 
+.task-checkbox:checked {
+  accent-color: black; /* Black checkbox tick */
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+
 
 /*Footer*/
 footer{
@@ -192,5 +202,123 @@ footer{
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 18px;
+}
+
+
+.top-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  /* padding: 0 10px; */
+}
+
+.left-controls {
+  flex-shrink: 0;
+}
+
+.right-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Style shared across all buttons & selects */
+.btn {
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22white%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  min-width: 120px;
+  text-align: left;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #333;
+}
+
+/* Input styling */
+#global-search {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  min-width: 160px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  background-image: none;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .top-controls-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .right-controls {
+    justify-content: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.day img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+
+.day-with-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  gap: 40px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  padding-left: 30px;
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.action-icon:hover {
+  opacity: 1;
 }
 
